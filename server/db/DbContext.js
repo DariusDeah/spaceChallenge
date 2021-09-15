@@ -4,7 +4,7 @@ import { ValueSchema } from '../models/Value'
 
 class DbContext {
   Values = mongoose.model('Value', ValueSchema);
-  Galaxy = mongoose.model('Galaxy', GalaxySchema)
+  Galaxys = mongoose.model('Galaxy', GalaxySchema)
 }
 
 export const dbContext = new DbContext()
