@@ -1,9 +1,12 @@
-import { Mongoose, Schema } from 'mongoose'
+import mongoose from 'mongoose'
+const Schema = mongoose.Schema
 
-export const Star = new Schema({
-  name: {
-    type: String,
-    required: true
+export const StarSchema = new Schema(
+  {
+    name: { type: String, required: true },
+    id: { type: Schema.Types.ObjectId }
+
   },
-  id: { type: Schema.Types.ObjectId }
-})
+
+  { timestamps: true, toJSON: { virtuals: true } }
+)
