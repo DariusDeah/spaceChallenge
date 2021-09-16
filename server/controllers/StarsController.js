@@ -11,6 +11,7 @@ export class StarsController extends BaseController {
   async getStars(req, res, next) {
     try {
       const stars = starsService.getStars()
+      res.send(stars)
     } catch (error) {
       next(error)
     }
