@@ -6,6 +6,7 @@ export class StarsController extends BaseController {
     super('api/stars')
     this.router
       .get('', this.getStars)
+      .post('/', this.createstars)
   }
 
   async getStars(req, res, next) {
@@ -14,6 +15,14 @@ export class StarsController extends BaseController {
       res.send(stars)
     } catch (error) {
       next(error)
+    }
+  }
+
+  async createStars() {
+    try {
+
+    } catch (error) {
+
     }
   }
 }

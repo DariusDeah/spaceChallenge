@@ -1,6 +1,6 @@
 import { Mongoose, SchemaType, Schema } from 'mongoose'
 
-export const Moon = new Schema(
+export const MoonSchema = new Schema(
   {
     name: { type: String, required: true },
     id: { type: Schema.Types.ObjectId }
